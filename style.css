@@ -1,0 +1,120 @@
+/*
+File Name      : style.css
+Description    : Css project_1.
+Author         : Arpan Jain
+version        : 1.0
+Created Date   : 08/03/2022
+Updated By     : Arpan Jain
+Updated Date   : 07/04/2022
+Line Update    :81,83
+ */
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+
+body {
+  background: linear-gradient(rgba(115, 233, 160, 0.75), rgba(113, 230, 113, 0.842)), url('nasa.jpg') no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.card {
+  box-shadow: 0 5px 8px 0 rgb(54, 116, 59);
+  background: rgba(239, 245, 243, 0.85);
+  text-align: center;
+  float: left;
+  margin: 10px;
+  width: 250px;
+  height: 350px;
+  padding: 30px 10px;
+  transition: 0.1s ease-in-out;
+
+}
+
+/* card effect */
+.card:hover {
+  transform: scale(1.1);
+}
+
+/* card icon effect */
+.card:hover .fa-earth-asia {
+  animation: rotation 1s ease-in-out;
+  animation-iteration-count: initial;
+}
+
+.card:hover .fa-compass {
+  animation: rotation 1s ease-in-out;
+  animation-iteration-count: initial;
+}
+
+.card:hover .fa-heart {
+  animation: beat .4s ease-in-out;
+  animation-iteration-count: initial;
+}
+
+.card:hover .fa-map {
+  animation: swing .6s ease-in-out;
+  animation-iteration-count: initial;
+}
+
+/* text alignment */
+.container {
+  text-align: center;
+}
+
+h3 {
+  margin-bottom: 20px;
+
+  color: rgb(61, 61, 61);
+}
+
+/* card icon function */
+.card i {
+  font-size: 80px;
+  background: linear-gradient(left, #7ed56f, #28b485);
+  background: -webkit-linear-gradient(left, #7ed56f, #28b485);
+  background-clip:text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  margin: 30px 0px 20px 0px;
+}
+
+/* card animation */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes beat {
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: skew(0deg);
+  }
+
+  50% {
+    transform: skew(-10deg);
+  }
+
+  100% {
+    transform: skew(10deg);
+  }
+}
